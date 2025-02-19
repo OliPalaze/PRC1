@@ -54,16 +54,16 @@ class BatchProcessor {
 
         for (let i = startIndex; i < endIndex; i++) {
             const process = this.processes[i];
-            process.status = 'Processing';
+            process.status = 'Procesando';
             this.updateUI();
 
             try {
                 await this.simulateProcessing(process);
                 process.result = this.performOperation(process);
-                process.status = 'Completed';
+                process.status = 'Completado';
                 this.processedCount++;
             } catch (error) {
-                process.status = 'Failed';
+                process.status = 'Fallido';
                 process.result = error.message;
             }
 
@@ -87,11 +87,11 @@ class BatchProcessor {
             case '-': return data1 - data2;
             case '*': return data1 * data2;
             case '/': 
-                if (data2 === 0) throw new Error('Division by zero');
+                if (data2 === 0) throw new Error('División entre cero');
                 return data1 / data2;
             case 'residue': return data1 % data2;
             case 'potency': return Math.pow(data1, data2);
-            default: throw new Error('Invalid operation');
+            default: throw new Error('Operación no soportada');
         }
     }
 
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!processData.programmerName || !processData.operation || 
             isNaN(processData.data1) || isNaN(processData.data2) || 
             isNaN(processData.estimatedTime)) {
-            alert('Please fill all fields with valid values');
+            alert('Por favor, complete todos los campos');
             return;
         }
 
