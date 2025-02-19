@@ -19,7 +19,7 @@ class BatchProcessor {
             data2: parseFloat(processData.data2),
             estimatedTime: parseFloat(processData.estimatedTime),
             result: null,
-            status: 'Pending'
+            status: 'Pendiente'
         };
         this.processes.push(newProcess);
         return newProcess;
