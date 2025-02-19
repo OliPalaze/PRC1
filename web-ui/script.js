@@ -89,8 +89,8 @@ class BatchProcessor {
             case '/': 
                 if (data2 === 0) throw new Error('División entre cero');
                 return data1 / data2;
-            case 'residuo': return data1 % data2;
-            case 'potencia': return Math.pow(data1, data2);
+            case 'residue': return data1 % data2;
+            case 'potency': return Math.pow(data1, data2);
             default: throw new Error('Operación no soportada');
         }
     }
