@@ -5,7 +5,7 @@ body {
     background-size: cover; /* Cover the whole screen */
     background-position: center; /* Center the image */
     background-repeat: repeat; 
-    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    background-color: rgba(255,255,255, 0.9); /* not so opaque white*/
     background-blend-mode: multiply;
     margin: 0;
     padding: 20px;
