@@ -4,7 +4,9 @@ body {
     background-image: url(https://raw.githubusercontent.com/OliPalaze/PRC1/refs/heads/main/web-ui/1600w-erWL1KR5XhI.webp);
     background-size: cover; /* Cover the whole screen */
     background-position: center; /* Center the image */
-    background-repeat: no-repeat; 
+    background-repeat: repeat; 
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    background-blend-mode: multiply;
     margin: 0;
     padding: 20px;
 }
